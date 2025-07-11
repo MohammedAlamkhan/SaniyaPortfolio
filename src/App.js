@@ -128,7 +128,7 @@ function App() {
       title: "Muttha IT Park (Muttha Towers)",
       description: "A commercial building in Yerawada, Pune, offering spacious office spaces primarily for IT/ITES companies.",
       details: "Muttha Towers, located on Loop Road, Yerawada, Pune, is a commercial building developed by the Muttha Group. It offers spacious office spaces, with up to 80% dedicated to IT/ITES companies. The building stands 8 floors tall with a total built-up area of approximately 9,76,000 sq. ft. Each floor has an area of approximately 1,22,000 sq. ft. Completed in 2008, it houses notable tenants like NXP Semiconductors. Amenities include a Building Management System (BMS), CCTV surveillance, lifts, visitor parking, power backup, and fire fighting equipment. It is strategically located near Pune airport and railway station, with proximity to hotels, other IT Parks, and educational institutions.",
-      image: "/muttha_it_park.jpg",
+      image: "/muttha_it_park.jpeg",
       contributions: [
         "Managed external design processes for the IT park's commercial spaces.",
         "Reviewed architectural documents to ensure compliance and functionality.",
@@ -163,7 +163,7 @@ function App() {
           <h2>About Me</h2>
           <Row className="align-items-center">
             <Col md={4}>
-              <img src="/Picture1.jpg" alt="Saniya Jamil" className="about-img" />
+              <img src="/saniya.jpg" alt="Saniya Jamil" className="about-img" />
             </Col>
             <Col md={8} className="text-start">
               <p>
