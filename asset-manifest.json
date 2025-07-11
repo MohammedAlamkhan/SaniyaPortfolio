@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/SaniyaPortfolio/static/css/main.aa536b62.css",
+    "main.js": "/SaniyaPortfolio/static/js/main.165913a9.js",
+    "static/js/453.a3c1d153.chunk.js": "/SaniyaPortfolio/static/js/453.a3c1d153.chunk.js",
+    "static/media/hero.jpeg": "/SaniyaPortfolio/static/media/hero.2ed119af44d8004a3d7e.jpeg",
+    "index.html": "/SaniyaPortfolio/index.html",
+    "main.aa536b62.css.map": "/SaniyaPortfolio/static/css/main.aa536b62.css.map",
+    "main.165913a9.js.map": "/SaniyaPortfolio/static/js/main.165913a9.js.map",
+    "453.a3c1d153.chunk.js.map": "/SaniyaPortfolio/static/js/453.a3c1d153.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa536b62.css",
+    "static/js/main.165913a9.js"
+  ]
+}
