@@ -163,7 +163,7 @@ function App() {
           <h2>About Me</h2>
           <Row className="align-items-center">
             <Col md={4}>
-              <img src={`${process.env.PUBLIC_URL}/saniua.jpg`} alt="Saniya Jamil" className="about-img" />
+              <img src={`${process.env.PUBLIC_URL}/saniya.jpg`} alt="Saniya Jamil" className="about-img" />
             </Col>
             <Col md={8} className="text-start">
               <p>
