@@ -1,38 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Navbar, Nav, Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import ProjectPage from './ProjectPage';
 
 function App() {
   const [expanded, setExpanded] = useState({});
   const location = useLocation();
-  const navigate = useNavigate();
 
   const toggleExpanded = (id) => {
     setExpanded(prevState => ({...prevState, [id]: !prevState[id]}));
   }
 
-  const handleNavLinkClick = (event, targetId) => {
-    event.preventDefault();
-    if (location.pathname !== '/') {
-      navigate(`/#${targetId}`);
-    } else {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
   useEffect(() => {
     if (location.hash) {
-      const element = document.getElementById(location.hash.slice(1));
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+      let elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        elem.scrollIntoView({behavior: "smooth"});
       }
-    } else if (location.pathname === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (location.pathname === process.env.PUBLIC_URL || location.pathname === process.env.PUBLIC_URL + '/') {
+      window.scrollTo({top: 0, left: 0, behavior: "smooth"});
     }
   }, [location]);
 
@@ -176,7 +163,7 @@ function App() {
           <h2>About Me</h2>
           <Row className="align-items-center">
             <Col md={4}>
-              <img src="./saniya.jpg" alt="Saniya Jamil" className="about-img" />
+              <img src="./Picture1.jpg" alt="Saniya Jamil" className="about-img" />
             </Col>
             <Col md={8} className="text-start">
               <p>
@@ -289,16 +276,16 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/#about" onClick={(e) => handleNavLinkClick(e, 'about')}>About</Nav.Link>
-              <Nav.Link as={Link} to="/#experience" onClick={(e) => handleNavLinkClick(e, 'experience')}>Experience</Nav.Link>
-              <Nav.Link as={Link} to="/#projects" onClick={(e) => handleNavLinkClick(e, 'projects')}>Projects</Nav.Link>
-              <Nav.Link as={Link} to="/#skills" onClick={(e) => handleNavLinkClick(e, 'skills')}>Skills</Nav.Link>
-              <Nav.Link as={Link} to="/#contact" onClick={(e) => handleNavLinkClick(e, 'contact')}>Contact</Nav.Link>
+              <Nav.Link as={Link} to="/#about">About</Nav.Link>
+              <Nav.Link as={Link} to="/#experience">Experience</Nav.Link>
+              <Nav.Link as={Link} to="/#projects">Projects</Nav.Link>
+              <Nav.Link as={Link} to="/#skills">Skills</Nav.Link>
+              <Nav.Link as={Link} to="/#contact">Contact</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Routes basename={process.env.PUBLIC_URL}>
+      <Routes>
         <Route path="/" element={<MainContent />} />
         <Route path="/project/:id" element={<ProjectPage projects={projects} />} />
       </Routes>
